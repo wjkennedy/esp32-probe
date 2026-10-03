@@ -1,0 +1,17 @@
+[project]
+name = "esp-usb-discovery"
+version = "0.1.0"
+description = "Read-only USB serial inventory and passive discovery for ESP-family devices"
+requires-python = ">=3.10"
+dependencies = ["pyserial>=3.5"]
+
+[project.scripts]
+esp-usb-discovery = "esp_usb_discovery.cli:main"
+esp-probe-mcp = "esp_usb_discovery.mcp_server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["esp_usb_discovery"]

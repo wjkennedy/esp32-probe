@@ -1,0 +1,26 @@
+{
+  "id": "cyd-esp32-2432s024",
+  "family": "ESP32-2432S024 / classic ESP32",
+  "source": "esp32_cyd_pda platformio.ini, TFT_eSPI/User_Setup.h, src/touch_pins.h",
+  "logic_voltage_v": 3.3,
+  "flash_size_bytes": 4194304,
+  "capabilities": {
+    "read_only": true,
+    "gpio_read": false,
+    "gpio_drive": false,
+    "i2c_scan": false,
+    "spi_probe": false
+  },
+  "reserved_gpio": {
+    "display": {"miso": 12, "mosi": 13, "sclk": 14, "cs": 15, "dc": 2},
+    "touch": {"irq": 36, "cs": 33, "miso": 12, "mosi": 13, "sclk": 14},
+    "sd": {"cs": 5, "sck": 18, "miso": 19, "mosi": 23},
+    "backlight": {"control": 27}
+  },
+  "notes": [
+    "Display and touch share the classic VSPI pins on this variant.",
+    "GPIO 34-39 are input-only on classic ESP32; GPIO 36 is touch IRQ here.",
+    "Do not infer a safe GPIO from absence in this file; board revisions vary."
+  ]
+}
+
